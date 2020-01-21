@@ -48,19 +48,19 @@ def drop_db
 end
 
 def seed_data
- create_conversations
  create_steps
  create_replicas
  create_answers
 end
 
-def create_conversations
-end
-
 def create_steps
+  steps.each do |step|
+    s = Step.create!(opening: step.opening)
+    puts "Step created with opening #{ s.opening }"
 end
 
 def  create_replicas
+  # создать к этому степу реплики и ответы
 end
 
 def  create_answers
