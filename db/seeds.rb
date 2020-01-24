@@ -55,6 +55,10 @@
   }
 ]
 
+hash = {
+  a: '123',
+  :b => '321',
+}
 
 def drop_db
  Rake::Task['db:drop'].invoke
@@ -63,38 +67,41 @@ def drop_db
 end
 
 def seed_data
- create_steps
- create_replicas
- create_answers
+  create_steps
+  # create_replicas
+  # create_answers
 end
 
 def create_steps
+
   @steps.each do |step|
     s = Step.create!(opening: step[:opening])
     puts "Step with opening #{ s[:opening] } just created"
+
+    create_replicas(s, step[:replicas])
+    create_answers(s, step[:answers])
   end
+
 end
 
-def create_replicas
-  @steps.each do |step|
-    replicas = step[:replicas]
-    replicas.each do |replica|
-      r = Replica.create!(position: replica[:position], phrase: replica[:phrase])
-      puts "Replica with position and phrase #{ r } was just created"
-    end
+def create_replicas(step, replicas)
+
+  replicas.each do |replica|
+    r = step.replicas.create!(replica)
+    puts "Replica with phrase '#{ r.phrase }' for step with id #{ r.step.id } just created"
   end
+
 end
 
+def create_answers(step, answers)
 
-def create_answers
-  @steps.each do |step|
-    answers = step[:replicas]
-    answers.each do |answer|
-      a = Answer.create!(position: answer[:position], phrase: answer[:phrase])
-      puts "Answer with position and phrase #{ a } was just created"
-    end
+  answers.each do |answer|
+    a = step.answers.create!(answer)
+    puts "Answer with phrase '#{ a.phrase }' for step with id #{ a.step.id } just created"
   end
+
 end
+
 
 drop_db
 seed_data
