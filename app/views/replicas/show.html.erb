@@ -7,12 +7,22 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @replica.type %>
+  <%= @replica.kind %>
 </p>
 
 <p>
   <strong>Timeout:</strong>
   <%= @replica.timeout %>
+</p>
+
+<p>
+  <strong>Phrase:</strong>
+  <%= @replica.phrase %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @replica.image %>
 </p>
 
 <%= link_to 'Edit', edit_replica_path(@replica) %> |

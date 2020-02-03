@@ -69,6 +69,6 @@ class ReplicasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def replica_params
-      params.require(:replica).permit(:position, :type, :timeout)
+      params.require(:replica).permit(:position, :type, :timeout, :phrase, :image)
     end
 end

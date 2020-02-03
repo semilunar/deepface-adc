@@ -7,8 +7,8 @@
     <tr>
       <th>Position</th>
       <th>Step</th>
-      <th>Next step</th>
       <th>Effect</th>
+      <th>Phrase</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +18,8 @@
       <tr>
         <td><%= answer.position %></td>
         <td><%= answer.step_id %></td>
-        <td><%= answer.next_step_id %></td>
         <td><%= answer.effect %></td>
+        <td><%= answer.phrase %></td>
         <td><%= link_to 'Show', answer %></td>
         <td><%= link_to 'Edit', edit_answer_path(answer) %></td>
         <td><%= link_to 'Destroy', answer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

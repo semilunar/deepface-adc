@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Position</th>
       <th>Gift</th>
+      <th>Opening</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
   <tbody>
     <% @steps.each do |step| %>
       <tr>
-        <td><%= step.position %></td>
         <td><%= step.gift %></td>
+        <td><%= step.opening %></td>
         <td><%= link_to 'Show', step %></td>
         <td><%= link_to 'Edit', edit_step_path(step) %></td>
         <td><%= link_to 'Destroy', step, method: :delete, data: { confirm: 'Are you sure?' } %></td>
