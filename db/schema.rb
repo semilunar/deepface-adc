@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_22_092856) do
+ActiveRecord::Schema.define(version: 2020_02_03_200458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_01_22_092856) do
   create_table "replicas", force: :cascade do |t|
     t.integer "position"
     t.integer "step_id"
-    t.string "kind", default: "text"
+    t.string "type", default: "text"
     t.integer "timeout", default: 1000
     t.string "phrase"
     t.string "image"

@@ -2,33 +2,18 @@
 
 <h1>Replicas</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Position</th>
-      <th>Type</th>
-      <th>Timeout</th>
-      <th>Phrase</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @replicas.each do |replica| %>
-      <tr>
-        <td><%= replica.position %></td>
-        <td><%= replica.kind %></td>
-        <td><%= replica.timeout %></td>
-        <td><%= replica.phrase %></td>
-        <td><%= replica.image %></td>
-        <td><%= link_to 'Show', replica %></td>
-        <td><%= link_to 'Edit', edit_replica_path(replica) %></td>
-        <td><%= link_to 'Destroy', replica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div>
+  <% @replicas.each do |replica| %>
+    <%= replica.position %>
+    <%= replica.type %>
+    <%= replica.timeout %>
+    <%= replica.phrase %>
+    <%= replica.image %>
+    <%= link_to 'Show', replica %>
+    <%= link_to 'Edit', edit_replica_path(replica) %>
+    <%= link_to 'Destroy', replica, method: :delete, data: { confirm:'Are you sure?' } %>
+  <% end %>
+</div>
 
 <br>
 
