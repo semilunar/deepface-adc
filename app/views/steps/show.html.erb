@@ -12,3 +12,16 @@
 
 <%= link_to 'Edit', edit_step_path(@step) %> |
 <%= link_to 'Back', steps_path %>
+
+<br><br><br>
+
+<%= link_to 'New text replica', new_step_text_replica_path(@step) %>
+<%= link_to 'New image replica', new_step_image_replica_path(@step) %>
+
+<br><br><br>
+
+<h3>Text Replicas</h3>
+<%= render @step.text_replicas %>
+
+<h3>Image Replicas</h3>
+<%= render @step.image_replicas %>

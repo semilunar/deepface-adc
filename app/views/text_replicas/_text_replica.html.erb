@@ -1,0 +1,10 @@
+<div>
+  <%= text_replica.position %>
+  <%= text_replica.type %>
+  <%= text_replica.timeout %>
+  <%= text_replica.phrase %>
+  <%= text_replica.image %>
+  <%= link_to 'Show', text_replica %>
+  <%= link_to 'Edit', edit_text_replica_path(text_replica) %>
+  <%= link_to 'Destroy', text_replica, method: :delete, data: { confirm:'Are you sure?' } %>
+</div>

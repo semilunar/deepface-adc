@@ -2,19 +2,12 @@
 
 <h1>Replicas</h1>
 
-<div>
-  <% @replicas.each do |replica| %>
-    <%= replica.position %>
-    <%= replica.type %>
-    <%= replica.timeout %>
-    <%= replica.phrase %>
-    <%= replica.image %>
-    <%= link_to 'Show', replica %>
-    <%= link_to 'Edit', edit_replica_path(replica) %>
-    <%= link_to 'Destroy', replica, method: :delete, data: { confirm:'Are you sure?' } %>
-  <% end %>
-</div>
+
+<% @replicas.each do |replica| %>
+  <%= render replica %>
+<% end %>
+
 
 <br>
 
-<%= link_to 'New Replica', new_replica_path %>
+<%#= link_to 'New Replica', new_replica_path %>

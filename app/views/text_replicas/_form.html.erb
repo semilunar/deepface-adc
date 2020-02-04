@@ -1,0 +1,39 @@
+<%= form_with(model: [@step, text_replica], local: true) do |form| %>
+  <% if text_replica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(text_replica.errors.count, "error") %> prohibited this text_replica from being saved:</h2>
+
+      <ul>
+        <% text_replica.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%#= form.number_field :step_id, value: params[:step_id]  %>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.number_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :timeout %>
+    <%= form.number_field :timeout %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phrase %>
+    <%= form.text_field :phrase %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

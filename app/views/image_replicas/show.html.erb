@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @image_replica.position %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @image_replica.type %>
+</p>
+
+<p>
+  <strong>Timeout:</strong>
+  <%= @image_replica.timeout %>
+</p>
+
+<p>
+  <strong>Phrase:</strong>
+  <%= @image_replica.phrase %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @image_replica.image %>
+</p>
+
+<%= link_to 'Edit', edit_image_replica_path(@image_replica) %> |
+<%= link_to 'Back', replicas_path %>

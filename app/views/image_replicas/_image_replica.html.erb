@@ -1,0 +1,10 @@
+<div>
+  <%= image_replica.position %>
+  <%= image_replica.type %>
+  <%= image_replica.timeout %>
+  <%= image_replica.phrase %>
+  <%= image_replica.image %>
+  <%= link_to 'Show', image_replica %>
+  <%= link_to 'Edit', edit_image_replica_path(image_replica) %>
+  <%= link_to 'Destroy', image_replica, method: :delete, data: { confirm:'Are you sure?' } %>
+</div>

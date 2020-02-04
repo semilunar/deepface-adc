@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @text_replica.position %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @text_replica.type %>
+</p>
+
+<p>
+  <strong>Timeout:</strong>
+  <%= @text_replica.timeout %>
+</p>
+
+<p>
+  <strong>Phrase:</strong>
+  <%= @text_replica.phrase %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @text_replica.image %>
+</p>
+
+<%= link_to 'Edit', edit_text_replica_path(@text_replica) %> |
+<%= link_to 'Back', replicas_path %>

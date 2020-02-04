@@ -1,0 +1,2 @@
+class TextReplica < Replica
+end

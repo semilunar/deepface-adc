@@ -1,0 +1,2 @@
+class ImageReplica < Replica
+end
